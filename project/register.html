@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>IkeSells...register</title>
+	<link rel="stylesheet" href="projectstyle.css" type="text/css">
+	<script type="text/javascript">
+
+	function passform(pass){
+		
+		if(pass.fullName.value==""){
+			alert("Please enter full name");
+		}
+
+		else if(pass.email.value==""){
+			alert("please enter  email");
+		}
+		 else if(pass.psw.value ==""||pass.psw-repeat.value==""){
+			alert("Please enter a password");
+		}
+		else if(pass.psw.value!=pass.psw-repeat.value){
+			alert("Please input the right password");
+		}
+		
+		else{
+			alert("Registration Complete");
+		}
+	}
+	</script>
+</head>
+<body style="background-image: url(cover/background.jpg); background-size:80%;">
+<div style="background-color:#050a1a; padding: 10px 10px 0 10px;">
+    <table align="center" id="nav">
+    	<tr>
+    		<!--<td><img src="logo.png" style="height="30%"; width="10%"; "></td>-->
+    		<td>
+    			<h4 style="color:white; margin-right: 100px;">IkeSells</h4> 
+    		</td>
+    		<td>
+    		<input type="text" name="search" placeholder="search for everything" style="position: relative; margin-left:5px; height: 30px; margin-top: 10px;"></td>
+    		<td><button type="submit" label="searchButton" width="18px" height="18px" style="position:relative; margin-left: 10px;">Go</button></td>
+    		<!--<td><a href="">Login</a></td> -->
+    		<td><a href="index.html">Home</a></td>
+    		<td><a href="signin.html">Log In</a></td>
+    		<td><a href="categories.html">Categories</a></td>
+    		<td><a href="">About us</a></td> 
+    		
+    	</tr>
+    </table>
+    </div>
+<form  onsubmit="passform(this)" style="background-color:white;margin-left:400px; margin-right:400px" >
+  <div class="contain">
+    <h1 style="color:#050a1a;">Register</h1>
+    <p>Please fill in this form to create an account.</p>
+    <hr>
+<label for="fullName"><b>Full Name</b></label>
+    <input type="text" placeholder="Isaac Agyen" name="fullName" >
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="eg izagyen96@gmail.com" name="email" >
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw">
+
+    <label for="psw-repeat"><b>Repeat Password</b></label>
+    <input type="password" placeholder="It'll be our secret" name="psw-repeat">
+    <hr>
+
+    <p>By creating an account you agree to our <a href="policy.html">Terms & Privacy</a>.</p>
+    <button type="submit" class="registerbtn">Register</button>
+  </div>
+
+  <div class="container signin">
+    <p>Already have an account? <a href="signin.html">Log in</a>.</p>
+  </div>
+</form>
+</body>
+</html>
